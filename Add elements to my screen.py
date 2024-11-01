@@ -57,7 +57,20 @@ sp1.rect.x = random.randint(0, 480)
 sp1.rect.y = random.randint(0, 370)
 all_sprites_list.add(sp1)
 
+sp2 = Sprite(WHITE, 20, 30)
+sp2.rect.x = random.randint(0, 480)
+sp2.rect.y = random.randint(0, 370)
+all_sprites_list.add(sp2)
 
+sp3 = Sprite(WHITE, 20, 30)
+sp3.rect.x = random.randint(0, 480)
+sp3.rect.y = random.randint(0, 370)
+all_sprites_list.add(sp3)
+
+sp4 = Sprite(WHITE, 20, 30)
+sp4.rect.x = random.randint(0, 480)
+sp4.rect.y = random.randint(0, 370)
+all_sprites_list.add(sp4)
 
 screen = pygame.display.set_mode((500, 400))
 pygame.display.set_caption("Colorful Bounce")
@@ -72,10 +85,16 @@ while not exit:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             exit = True
+        
         elif event.type == SPRITE_COLOR_CHANGE_EVENT:
             sp1.change_color()
+            sp2.change_color()
+            sp3.change_color()
+            sp4.change_color()
+            
         elif event.type == BACKGROUND_COLOR_CHANGE_EVENT:
             change_background_color()
+            
     all_sprites_list.update()
     screen.fill(bg_color)
     
